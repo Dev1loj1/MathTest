@@ -127,3 +127,17 @@ MathTest::~MathTest() {
     delete[] tasks;
     delete[] user_answers;
 }
+
+// ==================== ОБРАБОТКА ОТВЕТА ====================
+
+void MathTest::set_user_answer(int index, int answer) {
+    if (index < 0 || index >= count) {
+        return;
+    }
+
+    user_answers[index] = answer;
+
+    if (answer == tasks[index].answer) {
+        correct_count++;
+    }
+}
