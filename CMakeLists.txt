@@ -7,14 +7,10 @@ set(CMAKE_CXX_STANDARD 20)
 add_library(Lib STATIC
         Lib/task.cpp
         Lib/task.h
-        Lib/task.h
-        Lib/task.h
-        Lib/task.cpp
 )
 
 # Основное приложение
 add_executable(MathTest
-        MathTest/main.cpp
         MathTest/main.cpp
 )
 
@@ -38,7 +34,6 @@ enable_testing()
 
 # Тесты
 add_executable(MathTests
-        Tests/tests.cpp
         Tests/tests.cpp
 )
 
